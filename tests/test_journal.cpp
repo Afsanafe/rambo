@@ -1,8 +1,10 @@
 #include "journal.hpp"
 #include <cassert>
 
-void driver() {
+void foo_test();
 
+void driver() {
+    foo_test();
 
     return;
 }
