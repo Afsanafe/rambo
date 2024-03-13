@@ -15,6 +15,7 @@ public:
     bool insertEntry(std::string entryName, std::string note);
     bool deleteEntry(std::string entryName);
     bool modifyEntry(std::string entryName, std::string modifiedNote);
+    void printAllEntries(void);
 };
 
 #endif

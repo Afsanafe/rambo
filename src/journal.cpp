@@ -1,4 +1,5 @@
 #include "journal.hpp"
+#include <iostream>
 #include <string>
 
 
@@ -49,4 +50,12 @@ bool Journal::modifyEntry(std::string entryName, std::string modifiedNote) {
 
     Journal::entries ->at(entryName) = modifiedNote;
     return true;
+}
+
+void Journal::printAllEntries(void) {
+    for (const auto& entry: *Journal::entries) {
+        std::cout << "Entry Name: " << entry.first << ", Content: " << entry.second << std::endl;
+    }
+
+    return;
 }
