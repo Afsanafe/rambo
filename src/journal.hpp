@@ -10,10 +10,11 @@ private:
 
 
 public:
-    std::string& getEntry(std::string& entryName);
-    bool insertEntry(std::string& note);
-    bool deleteEntry(std::string& entryName);
-    bool modifyEntry(std::string& entryName);
+    Journal() : entries(new std::unordered_map<std::string, std::string>()) {}
+    std::string getEntry(std::string entryName);
+    bool insertEntry(std::string entryName, std::string note);
+    bool deleteEntry(std::string entryName);
+    bool modifyEntry(std::string entryName, std::string modifiedNote);
 };
 
 #endif
