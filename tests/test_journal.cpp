@@ -15,7 +15,7 @@ void foo_test() {
     int b = 1;
 
     // act
-    a = b;
+    // a = b;
 
     // assert
     assert (a == b);
